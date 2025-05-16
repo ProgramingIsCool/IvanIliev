@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="bg">
 <head>
   <meta charset="UTF-8">
@@ -9,7 +9,7 @@
       padding: 0;
       height: 100%;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #f0f0f0;
+      background-color: #000;
       overflow: hidden;
     }
 
@@ -47,16 +47,17 @@
     .main-content {
       display: flex;
       flex: 1;
-      height: calc(100vh - 140px); /* височина без футъра */
+      height: calc(100vh - 140px);
     }
 
     .background {
       flex: 1;
-      background-image: url("images/background/background.png");
+      background-image: url("images/background/background.png"); /* За компютър */
       background-repeat: no-repeat;
-      background-position: center;
+      background-position: center center;
       background-size: cover;
-      background-color: #fff;
+      background-color: #000;
+      min-height: 400px;
     }
 
     .thumbnails {
@@ -132,6 +133,7 @@
       cursor: pointer;
     }
 
+    /* 🟡 Мобилна версия */
     @media (max-width: 768px) {
       .main-content {
         flex-direction: column;
@@ -139,8 +141,10 @@
       }
 
       .background {
-        background-size: contain;
-        height: 250px;
+        height: 300px;
+        background-image: url("images/background/background1.png"); /* За телефон */
+        background-position: center;
+        background-size: cover;
       }
 
       .thumbnails {
