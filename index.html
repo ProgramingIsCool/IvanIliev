@@ -1,7 +1,8 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="bg">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- ✅ Много важно за мобилната версия -->
   <title>Начало | Иван Илиев</title>
   <style>
     html, body {
@@ -17,24 +18,33 @@
       display: flex;
       flex-direction: column;
     }
+	
+	nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px 20px; /* разстояния между бутоните */
+  background-color: #2e2e2e; /* тъмно сиво за хедър */
+  padding: 15px;
+  color: white;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
 
-    nav {
-      display: flex;
-      justify-content: center;
-      background-color: #333;
-      padding: 15px 0;
-      color: white;
-      flex-wrap: wrap;
-    }
+nav button {
+  background: none;
+  border: none;
+  font-size: 16px;
+  padding: 5px 10px;
+  color: white;
+  cursor: pointer;
+  white-space: nowrap;
+}
 
-    nav button {
-      background: none;
-      border: none;
-      font-size: 16px;
-      margin: 0 15px;
-      color: white;
-      cursor: pointer;
-    }
 
     nav button:hover {
       text-decoration: underline;
@@ -66,7 +76,7 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 15px;
-      background-color: rgba(51, 51, 51, 0.9);
+      background-color: rgba(70, 70, 70, 1);
       border-left: 2px solid #333;
       overflow-y: auto;
     }
@@ -89,7 +99,7 @@
     }
 
     footer {
-      background-color: #333;
+      background-color: #2e2e2e; 
       color: white;
       padding: 1px;
       line-height: 1.6;
@@ -133,7 +143,7 @@
       cursor: pointer;
     }
 
-    /* 🟡 Мобилна версия */
+    /* ✅ Мобилна версия */
     @media (max-width: 768px) {
       .main-content {
         flex-direction: column;
@@ -142,7 +152,7 @@
 
       .background {
         height: 300px;
-        background-image: url("images/background/background1.png"); /* За телефон */
+        background-image: url("images/background/background.png"); /* За телефон */
         background-position: center;
         background-size: cover;
       }
