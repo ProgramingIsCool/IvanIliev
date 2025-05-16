@@ -2,7 +2,7 @@
 <html lang="bg">
 <head>
   <meta charset="UTF-8">
-  <title>Начало | Иван Илиев </title>
+  <title>Начало | Иван Илиев</title>
   <style>
     html, body {
       margin: 0;
@@ -47,22 +47,16 @@
     .main-content {
       display: flex;
       flex: 1;
-      height: calc(100vh - 140px); /* корекция за по-висок футър */
+      height: calc(100vh - 140px); /* височина без футъра */
     }
 
     .background {
       flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
+      background-image: url("images/background/background.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
       background-color: #fff;
-    }
-
-    .background img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
     }
 
     .thumbnails {
@@ -144,6 +138,11 @@
         height: auto;
       }
 
+      .background {
+        background-size: contain;
+        height: 250px;
+      }
+
       .thumbnails {
         width: 100%;
         grid-template-columns: repeat(3, 1fr);
@@ -174,9 +173,7 @@
   </nav>
 
   <div class="main-content">
-    <div class="background">
-      <img src="images/background/background.png" alt="Фон">
-    </div>
+    <div class="background"></div>
 
     <div class="thumbnails">
       <img src="images/img1.jpg" onclick="openModal(this.src)" alt="thumb1">
@@ -187,7 +184,7 @@
       <img src="images/img6.jpg" onclick="openModal(this.src)" alt="thumb6">
       <img src="images/img7.jpg" onclick="openModal(this.src)" alt="thumb7">
       <img src="images/img8.jpg" onclick="openModal(this.src)" alt="thumb8">
-	  <img src="images/img9.jpg" onclick="openModal(this.src)" alt="thumb9">
+      <img src="images/img9.jpg" onclick="openModal(this.src)" alt="thumb9">
       <img src="images/img10.jpg" onclick="openModal(this.src)" alt="thumb10">
     </div>
   </div>
