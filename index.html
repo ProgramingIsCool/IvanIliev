@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <title>Начало</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f0f0;
+      overflow: hidden;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #333;
+      padding: 15px 0;
+      color: white;
+      flex-wrap: wrap;
+    }
+
+    nav button {
+      background: none;
+      border: none;
+      font-size: 16px;
+      margin: 0 15px;
+      color: white;
+      cursor: pointer;
+    }
+
+    nav button:hover {
+      text-decoration: underline;
+    }
+
+    nav button:focus {
+      outline: none;
+    }
+
+    .main-content {
+      display: flex;
+      flex: 1;
+      height: calc(100vh - 140px); /* корекция за по-висок футър */
+    }
+
+    .background {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background-color: #fff;
+    }
+
+    .background img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .thumbnails {
+      width: 270px;
+      padding: 15px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      background-color: rgba(51, 51, 51, 0.9);
+      border-left: 2px solid #333;
+      overflow-y: auto;
+    }
+
+    .thumbnails img {
+      width: 100%;
+      height: 110px;
+      object-fit: cover;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      border: 2px solid #444;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+
+    .thumbnails img:hover {
+      transform: scale(1.05);
+      border-color: #fff;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.35);
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 1px;
+      line-height: 1.6;
+    }
+
+    footer div {
+      text-align: left;
+      margin-left: 5px;
+    }
+
+    .footer-title {
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .footer-sub {
+      font-size: 14px;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.85);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
+    }
+
+    .modal:hover {
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .main-content {
+        flex-direction: column;
+        height: auto;
+      }
+
+      .thumbnails {
+        width: 100%;
+        grid-template-columns: repeat(3, 1fr);
+        border-left: none;
+        border-top: 2px solid #333;
+        height: auto;
+      }
+
+      html, body {
+        overflow: auto;
+      }
+
+      footer div {
+        margin-left: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <button onclick="location.href='index.html'">Начало</button>
+    <button onclick="location.href='proektirane.html'">Проектиране и надзор</button>
+    <button onclick="location.href='partniori.html'">Партньори</button>
+    <button onclick="location.href='galeria.html'">Галерия</button>
+    <button onclick="location.href='zame.html'">За мен</button>
+    <button onclick="location.href='kontakt.html'">Контакти</button>
+  </nav>
+
+  <div class="main-content">
+    <div class="background">
+      <img src="images/background/background.png" alt="Фон">
+    </div>
+
+    <div class="thumbnails">
+      <img src="images/img1.jpg" onclick="openModal(this.src)" alt="thumb1">
+      <img src="images/img2.jpg" onclick="openModal(this.src)" alt="thumb2">
+      <img src="images/img3.jpg" onclick="openModal(this.src)" alt="thumb3">
+      <img src="images/img4.jpg" onclick="openModal(this.src)" alt="thumb4">
+      <img src="images/img5.jpg" onclick="openModal(this.src)" alt="thumb5">
+      <img src="images/img6.jpg" onclick="openModal(this.src)" alt="thumb6">
+      <img src="images/img7.jpg" onclick="openModal(this.src)" alt="thumb7">
+      <img src="images/img8.jpg" onclick="openModal(this.src)" alt="thumb8">
+	  <img src="images/img9.jpg" onclick="openModal(this.src)" alt="thumb9">
+      <img src="images/img10.jpg" onclick="openModal(this.src)" alt="thumb10">
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-title">Инженер Иван Илиев проектант-конструктор</div>
+    <div class="footer-sub">с пълна проектантска правоспособност от КИИП</div>
+    <div class="footer-sub">рег. №07668 технически контрол и управител на фирма за независим строителен надзор.</div>
+  </footer>
+
+  <div class="modal" id="modal" onclick="closeModal()">
+    <img id="modal-img" src="" alt="Увеличена снимка">
+  </div>
+
+  <script>
+    function openModal(src) {
+      const modal = document.getElementById("modal");
+      const modalImg = document.getElementById("modal-img");
+      modalImg.src = src;
+      modal.style.display = "flex";
+    }
+
+    function closeModal() {
+      document.getElementById("modal").style.display = "none";
+    }
+  </script>
+
+</body>
+</html>

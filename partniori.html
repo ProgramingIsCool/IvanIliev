@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="bg">	
+<head>
+  <meta charset="UTF-8">
+  <title>Партньори</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f0f0;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #333;
+      padding: 15px 0;
+      color: white;
+      flex-wrap: wrap;
+    }
+
+    nav button {
+      background: none;
+      border: none;
+      font-size: 16px;
+      margin: 0 15px;
+      color: white;
+      cursor: pointer;
+    }
+
+    nav button:hover {
+      text-decoration: underline;
+    }
+
+    nav button:focus {
+      outline: none;
+    }
+
+    main {
+      flex: 1;
+      padding: 30px;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 1px;
+      line-height: 1.6;
+    }
+
+    footer div {
+      text-align: left;
+      margin-left: 5px;
+    }
+
+    .footer-title {
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .footer-sub {
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <button onclick="location.href='index.html'">Начало</button>
+    <button onclick="location.href='proektirane.html'">Проектиране и надзор</button>
+    <button onclick="location.href='partniori.html'">Партньори</button>
+    <button onclick="location.href='galeria.html'">Галерия</button>
+    <button onclick="location.href='zame.html'">За мен</button>
+    <button onclick="location.href='kontakt.html'">Контакти</button>
+  </nav>
+
+  <main>
+  <h1>Партньори</h1>
+  <p>През годините сме изградили стабилни професионални взаимоотношения с утвърдени партньори в областта на архитектурата, проектирането и строителството:</p>
+
+  <div class="partners-container">
+    <ul class="partner-list">
+      <li>• AEONYX ЕООД - Архитект Кумбаров</li>
+      <li>• АРТЕК - Архитект Тюфекчиев</li>
+      <li>• Интер Соф Проект | ЕООД</li>
+	  <li>• Synergy Build</li>
+	  <li>• Архитект Башов</li>
+	  <li>• Архитект Георги Скрижовски</li>
+	  <li>• Архитект Ани Мирчева</li>
+      <li>• Община Гоце Делчев</li>
+      <li>• Община Благоевград</li>
+	  <li>• Община Гърмен</li>
+	  <li>• Община Банско</li>
+	  <li>• Община Враца</li>
+    </ul>
+  </div>
+</main>
+
+<style>
+  .partners-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    margin-top: 30px;
+    max-width: 700px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+
+  .partner-list {
+    list-style: none;
+    padding: 0;
+    font-size: 18px;
+    line-height: 2;
+    font-weight: 500;
+  }
+
+  .partner-list li::before {
+    content: "🤝 ";
+    margin-right: 6px;
+  }
+</style>
+
+  <footer>
+    <div class="footer-title">Инженер Иван Илиев проектант-конструктор</div>
+    <div class="footer-sub">с пълна проектантска правоспособност от КИИП</div>
+    <div class="footer-sub">рег. №07668 технически контрол и управител на фирма за независим строителен надзор.</div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <title>Контакти</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f0f0;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #333;
+      padding: 15px 0;
+      color: white;
+      flex-wrap: wrap;
+    }
+
+    nav button {
+      background: none;
+      border: none;
+      font-size: 16px;
+      margin: 0 15px;
+      color: white;
+      cursor: pointer;
+    }
+
+    nav button:hover {
+      text-decoration: underline;
+    }
+
+    nav button:focus {
+      outline: none;
+    }
+
+    main {
+      flex: 1;
+      padding: 30px;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 1px;
+      line-height: 1.6;
+    }
+
+    footer div {
+      text-align: left;
+      margin-left: 5px;
+    }
+
+    .footer-title {
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .footer-sub {
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <button onclick="location.href='index.html'">Начало</button>
+    <button onclick="location.href='proektirane.html'">Проектиране и надзор</button>
+    <button onclick="location.href='partniori.html'">Партньори</button>
+    <button onclick="location.href='galeria.html'">Галерия</button>
+    <button onclick="location.href='zame.html'">За мен</button>
+    <button onclick="location.href='kontakt.html'">Контакти</button>
+  </nav>
+
+ <main>
+  <h1>Контакти</h1>
+  <div class="contact-container">
+
+    <!-- Форма -->
+    <form class="contact-form" action="send.php" method="POST">
+      <label for="name">Име:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Вашия имейл:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Съобщение:</label>
+      <textarea id="message" name="message" rows="6" required></textarea>
+
+      <button type="submit">Изпрати</button>
+    </form>
+
+    <!-- Дясна част със снимка и адрес -->
+    <div class="contact-info">
+      <img src="images/office.png" alt="Офис" class="office-img">
+      <div class="office-address">
+        <strong>Имейл</strong><br>
+         ingiliev@abv.bg
+        <br><strong>Телефон:</strong><br>
+        +359 898 789 724
+        <br><strong> Адрес на офиса:</strong><br>
+        ул. Александър Стамболийски 7 
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<style>
+  .contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+    margin-top: 30px;
+  }
+
+  .contact-form {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+
+  .contact-form label {
+    margin-top: 15px;
+    font-weight: 600;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+  }
+
+  .contact-form button {
+    margin-top: 20px;
+    padding: 12px;
+    font-size: 16px;
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  .contact-form button:hover {
+    background-color: #1a242f;
+  }
+
+  .contact-info {
+    flex: 1;
+    min-width: 260px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .office-img {
+    max-width: 90%;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  }
+
+  .office-address {
+    margin-top: 15px;
+    background-color: rgba(255,255,255,0.85);
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 16px;
+    width: 90%;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    text-align: left;
+  }
+</style>
+
+
+
+  <footer>
+    <div class="footer-title">Инженер Иван Илиев проектант-конструктор</div>
+    <div class="footer-sub">с пълна проектантска правоспособност от КИИП</div>
+    <div class="footer-sub">рег. №07668 технически контрол и управител на фирма за независим строителен надзор.</div>
+  </footer>
+
+</body>
+</html>
