@@ -2,74 +2,83 @@
 <html lang="bg">	
 <head>
   <meta charset="UTF-8">
-  <title>Партньори | Иван Илиев </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- ✅ Много важно за мобилната версия -->
+  <title>Партньори</title>
   <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f0f0f0;
-    }
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f0f0f0;
+  }
 
-    body {
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
 
-    nav {
-      display: flex;
-      justify-content: center;
-      background-color: #333;
-      padding: 15px 0;
-      color: white;
-      flex-wrap: wrap;
-    }
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px 20px; /* разстояния между бутоните */
+    background-color: #2e2e2e; /* тъмно сиво за хедър */
+    padding: 15px;
+    color: white;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
 
-    nav button {
-      background: none;
-      border: none;
-      font-size: 16px;
-      margin: 0 15px;
-      color: white;
-      cursor: pointer;
-    }
+  nav button {
+    background: none;
+    border: none;
+    font-size: 16px;
+    padding: 5px 10px;
+    color: white;
+    cursor: pointer;
+    white-space: nowrap;
+  }
 
-    nav button:hover {
-      text-decoration: underline;
-    }
+  nav button:hover {
+    text-decoration: underline;
+  }
 
-    nav button:focus {
-      outline: none;
-    }
+  nav button:focus {
+    outline: none;
+  }
 
-    main {
-      flex: 1;
-      padding: 30px;
-    }
+  main {
+    flex: 1;
+    padding: 30px;
+  }
 
-    footer {
-      background-color: #333;
-      color: white;
-      padding: 1px;
-      line-height: 1.6;
-    }
+  footer {
+    background-color: #333;
+    color: white;
+    padding: 1px;
+    line-height: 1.6;
+  }
 
-    footer div {
-      text-align: left;
-      margin-left: 5px;
-    }
+  footer div {
+    text-align: left;
+    margin-left: 5px;
+  }
 
-    .footer-title {
-      font-size: 28px;
-      font-weight: bold;
-    }
+  .footer-title {
+    font-size: 28px;
+    font-weight: bold;
+  }
 
-    .footer-sub {
-      font-size: 14px;
-    }
-  </style>
+  .footer-sub {
+    font-size: 14px;
+  }
+</style>
 </head>
 <body>
 
