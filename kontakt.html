@@ -2,7 +2,8 @@
 <html lang="bg">
 <head>
   <meta charset="UTF-8">
-  <title>Контакти | Иван Илиев </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Контакти</title>
   <style>
     html, body {
       margin: 0;
@@ -19,30 +20,38 @@
     }
 
     nav {
-      display: flex;
-      justify-content: center;
-      background-color: #333;
-      padding: 15px 0;
-      color: white;
-      flex-wrap: wrap;
-    }
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px 20px; /* разстояния между бутоните */
+    background-color: #2e2e2e; /* тъмно сиво за хедър */
+    padding: 15px;
+    color: white;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
 
-    nav button {
-      background: none;
-      border: none;
-      font-size: 16px;
-      margin: 0 15px;
-      color: white;
-      cursor: pointer;
-    }
+  nav button {
+    background: none;
+    border: none;
+    font-size: 16px;
+    padding: 5px 10px;
+    color: white;
+    cursor: pointer;
+    white-space: nowrap;
+  }
 
-    nav button:hover {
-      text-decoration: underline;
-    }
+  nav button:hover {
+    text-decoration: underline;
+  }
 
-    nav button:focus {
-      outline: none;
-    }
+  nav button:focus {
+    outline: none;
+  }
 
     main {
       flex: 1;
@@ -104,12 +113,12 @@
     <div class="contact-info">
       <img src="images/office.png" alt="Офис" class="office-img">
       <div class="office-address">
-        <strong>Имейл:</strong><br>
+        <strong>Имейл</strong><br>
          ingiliev@abv.bg
         <br><strong>Телефон:</strong><br>
         +359 898 789 724
         <br><strong> Адрес на офиса:</strong><br>
-        ул. "Александър Стамболийски" 7 
+        ул. Александър Стамболийски 7 
       </div>
     </div>
 
